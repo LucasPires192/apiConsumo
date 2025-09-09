@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Text, Image, View, FlatList } from 'react-native';
+import Header from './components/Header';
 import style from './style.js';
 
 const request = async (callback) => {
@@ -17,25 +18,25 @@ export default function App() {
 
     return (
         <View style={style.container}>
+            <Header />
             <View>
-                <Text style={style.superior}>
+                <Text style={style.titulo}>
                     Cartas do Yu-Gi-Oh!
                 </Text>
             </View>
 
             <FlatList
                 data={registros}
-                keyExtractor={(item) => item.name.toString()}
+                keyExtractor={(item) => item.id}
                 renderItem={({item}) =>
-                    <Text style={style.item}>
-                        <Text>Nome: {item.name}{'\n'}</Text>
-                        <Text>Tipo: {item.type}{'\n'}</Text>
-                        <Text>Descrição: {item.desc}{'\n'}</Text>
+                    <View style={style.item}>
                         <Image 
-                            source={{uri: item.card_images.image_url_small}}
-                            style={{ width: 100, height: 100 }}
+                            source={{uri: item.card_images[0].image_url_small}}
+                            style={style.card_image}
                         />
-                    </Text>
+                        <Text style={style.nome}>Nome: {item.name}{'\n'}</Text>
+                        <Text style={style.tipo}>Tipo: {item.type}{'\n'}</Text>
+                    </View>
                 }
             />
         </View>
