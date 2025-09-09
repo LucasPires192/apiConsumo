@@ -8,4 +8,4 @@ Api usado:
 
 Print do App:
 
-![Print da home](assets/print.home_png)
+![Print da home](assets/print_home.png)
