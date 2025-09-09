@@ -5,3 +5,7 @@ Aplicativo mobile criado em sala de aula no curso de desenvolvimento de sitemas 
 Api usado: 
 - Yu-Gi-Oh! API do YGOPRODeck 
 - - Api de Yu-Gi-Oh, usado para pegar os detalhes das cartas
+
+Print do App:
+
+![Print da home](assets/print.home_png)
