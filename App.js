@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Text, View, FlatList } from 'react-native';
+import { Text, Image, View, FlatList } from 'react-native';
 import style from './style.js';
 
 const request = async (callback) => {
@@ -30,6 +30,11 @@ export default function App() {
                     <Text style={style.item}>
                         <Text>Nome: {item.name}{'\n'}</Text>
                         <Text>Tipo: {item.type}{'\n'}</Text>
+                        <Text>Descrição: {item.desc}{'\n'}</Text>
+                        <Image 
+                            source={{uri: item.card_images.image_url_small}}
+                            style={{ width: 100, height: 100 }}
+                        />
                     </Text>
                 }
             />
