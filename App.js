@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { Text, Image, View, FlatList } from 'react-native';
+import { Text, View, FlatList } from 'react-native';
 import Header from './components/Header';
+import CardInfo from './components/CardInfo';
 import style from './style.js';
 
 const request = async (callback) => {
@@ -29,14 +30,11 @@ export default function App() {
                 data={registros}
                 keyExtractor={(item) => item.id}
                 renderItem={({item}) =>
-                    <View style={style.item}>
-                        <Image 
-                            source={{uri: item.card_images[0].image_url_small}}
-                            style={style.card_image}
-                        />
-                        <Text style={style.nome}>Nome: {item.name}{'\n'}</Text>
-                        <Text style={style.tipo}>Tipo: {item.type}{'\n'}</Text>
-                    </View>
+                    <CardInfo 
+                        imagem = {item.card_images[0].image_url_small}
+                        nome = {item.name}
+                        tipo = {item.type}
+                    />
                 }
             />
         </View>
