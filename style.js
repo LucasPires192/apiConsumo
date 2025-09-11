@@ -6,9 +6,11 @@ const style = StyleSheet.create({
         fontWeight: 'bold',
         marginBottom: 20,
         textAlign: 'center',
+        fontFamily: 'serif',
+        color: '#e6e2e2ff',
     },
     container: {
-        backgroundColor: '#f4f5f9',
+        backgroundColor: '#30140cff',
         flex: 1,
         flexDirection: 'column',
     }

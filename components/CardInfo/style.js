@@ -11,6 +11,7 @@ const style = StyleSheet.create({
         borderRadius: 10,
         overflow: 'hidden',
         alignItems: 'center',
+        margin: 10,
     },
     card_image_container: {
         height: 320,
@@ -22,10 +23,16 @@ const style = StyleSheet.create({
         width: '100%',
         resizeMode: 'contain',
     },
+    card_info: {
+        fontFamily: 'serif',
+        fontSize: 16,
+        fontWeight: 500,
+    },
     card_label: {
         textAlign: 'center',
-        fontSize: 16,
+        fontSize: 20,
         fontWeight: 800,
+        textAlign: 'left',
     },
 })
 
