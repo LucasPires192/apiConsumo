@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { Text, View, FlatList } from 'react-native';
 import Header from './components/Header';
+import BtnOrderBy from './components/BtnOrderBy';
 import CardInfo from './components/CardInfo';
 import style from './style.js';
 
-const request = async (callback) => {
-    const response = await fetch('https://db.ygoprodeck.com/api/v7/cardinfo.php');
+const request = async (callback, orderBy = "") => {
+    const url = `https://db.ygoprodeck.com/api/v7/cardinfo.php${orderBy}`;
+    const response = await fetch(url);
     const parsed = await response.json();
     callback(parsed.data);
 }
@@ -24,6 +26,13 @@ export default function App() {
                 <Text style={style.titulo}>
                     Cartas do Yu-Gi-Oh!
                 </Text>
+            </View>
+
+            <View style={style.orderBy}>
+                <BtnOrderBy 
+                    btnName='Normal Monster'
+                    onPress={() => request(setRegistros, '?type=Normal Monster')}
+                /> 
             </View>
 
             <FlatList
