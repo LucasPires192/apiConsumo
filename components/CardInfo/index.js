@@ -2,7 +2,7 @@ import { View, Image, Text } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import style from './style.js';
 
-const CardInfo = ({imagem, nome, tipo}) => {
+const CardInfo = ({image, name, type}) => {
     return(
         <LinearGradient
             colors={['#B2933E', '#B2933E', '#372E0B']}
@@ -13,7 +13,7 @@ const CardInfo = ({imagem, nome, tipo}) => {
         >
             <View style={style.card_image_container}>
                 <Image 
-                    source={{uri: imagem}}
+                    source={{uri: image}}
                     style={style.card_image}
                 />
             </View>
@@ -22,11 +22,11 @@ const CardInfo = ({imagem, nome, tipo}) => {
                     <Text style={style.card_label}>
                         Nome:
                     </Text>
-                    {'  '}{nome}{'\n'}
+                    {'  '}{name}{'\n'}
                     <Text style={style.card_label}>
                         Tipo:
                     </Text>
-                    {'  '}{tipo}{'\n'}
+                    {'  '}{type}{'\n'}
                 </Text>
             </View>
         </LinearGradient>

@@ -1,7 +1,7 @@
 import { StyleSheet } from 'react-native';
 
 const style = StyleSheet.create({
-    titulo:  {
+    title: {
         fontSize: 26,
         fontWeight: 'bold',
         marginBottom: 20,
@@ -13,6 +13,13 @@ const style = StyleSheet.create({
         backgroundColor: '#30140cff',
         flex: 1,
         flexDirection: 'column',
+    },
+    filterBtn: {
+        padding: 10,
+    },
+    filterBtnLabel: {
+        textAlign: 'center',
+        color: '#e6e2e2ff',
     }
 })
 
