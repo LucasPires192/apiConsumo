@@ -77,7 +77,7 @@ export default function App() {
                     renderItem={({item}) =>
                         <TouchableOpacity
                             style={style.filterBtn}
-                            onPress={() => handleFilter(item.param?`&type=${item.param}`:"")}
+                            onPress={() => handleFilter(item.pararm?`&type=${item.param}`:"")}
                         >
                             <Text style={style.filterBtnLabel}>{item.name}</Text>
                         </TouchableOpacity>
