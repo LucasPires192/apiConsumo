@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Text, View, ScrollView, FlatList, TouchableOpacity } from 'react-native';
+import { Text, View, FlatList, TouchableOpacity } from 'react-native';
 import Header from './components/Header';
 import CardInfo from './components/CardInfo';
 import style from './style.js';
@@ -77,7 +77,7 @@ export default function App() {
                     renderItem={({item}) =>
                         <TouchableOpacity
                             style={style.filterBtn}
-                            onPress={() => handleFilter(item.pararm?`&type=${item.param}`:"")}
+                            onPress={() => handleFilter(item.param?`&type=${item.param}`:"")}
                         >
                             <Text style={style.filterBtnLabel}>{item.name}</Text>
                         </TouchableOpacity>

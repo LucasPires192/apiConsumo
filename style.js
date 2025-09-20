@@ -16,6 +16,10 @@ const style = StyleSheet.create({
     },
     filterBtn: {
         padding: 10,
+        borderColor: '#000',
+        borderWidth: 2,
+        borderRadius: 20,
+        marginHorizontal: 5, 
     },
     filterBtnLabel: {
         textAlign: 'center',
