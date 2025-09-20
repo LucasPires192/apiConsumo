@@ -16,7 +16,7 @@ const style = StyleSheet.create({
     },
     filterBtn: {
         padding: 10,
-        borderColor: '#000',
+        borderColor: '#9e9e9eff',
         borderWidth: 2,
         borderRadius: 20,
         marginHorizontal: 5, 
